@@ -19,7 +19,7 @@ st.sidebar.markdown("""**Recent Searches: **""")
 prev = state.searches[0]
 for x in state.searches[1:]:
   prev = prev+', '+ x
-searches = st.sidebar.write(prev)
+searches = st.sidebar.text(prev)
 st.write('Showing stats for '+ name.title())
 print_data(name)
 if st.sidebar.button('Clear Recents'):
